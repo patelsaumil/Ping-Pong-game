@@ -63,11 +63,6 @@ It features:
 - Modern web browser (Chrome, Firefox, Edge)
 - No server required — just open `index.html`
 
----
-
-## 🙌 Credits
-
-Developed as a JavaScript + Canvas practice project.
 
 ---
 
