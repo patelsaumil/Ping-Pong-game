@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ping Pong Game</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Player Name Modal -->
+  <div class="modal fade" id="name-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content p-3">
+        <div class="modal-header"><h5>Enter Player Names</h5></div>
+        <div class="modal-body">
+          <input type="text" id="playerLeft" class="form-control mb-2" placeholder="Left Player Name"/>
+          <input type="text" id="playerRight" class="form-control" placeholder="Right Player Name"/>
+        </div>
+        <div class="modal-footer">
+          <button id="start-game-btn" class="btn btn-primary">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mode Selector -->
+  <div id="mode-select" class="text-center my-3" style="display:none;">
+    <h4>Select Game Mode:</h4>
+    <button id="powerup-mode" class="btn btn-danger mx-2">Power-Up Mode</button>
+    <button id="timer-mode" class="btn btn-success mx-2">Timer + Sudden Death</button>
+  </div>
+
+  <!-- Game -->
+  <div class="container">
+    <canvas id="canvas" width="700" height="400"></canvas>
+  </div>
+
+  <!-- Controls -->
+  <div class="button">
+    <button id="pause-btn" class="btn" disabled>Pause</button>
+    <button id="restart-btn" class="btn">Restart</button>
+  </div>
+  <p class="control">Control: Left Player (W/S) | Right Player (↑/↓)</p>
+
+  <!-- Victory Modal -->
+  <div class="modal" id="message-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content p-3 text-center">
+        <h5 id="message"></h5>
+        <button id="message-modal-close" class="btn btn-secondary mt-2">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
